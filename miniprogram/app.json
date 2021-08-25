@@ -40,7 +40,7 @@
 	"tabBar": {
 		"backgroundColor": "#fefefe",
 		"color": "#999",
-		"selectedColor": "#2dcbc8",
+		"selectedColor": "#000000",
 		"list": [
 			{
 				"pagePath": "school/pages/index/index_home",
