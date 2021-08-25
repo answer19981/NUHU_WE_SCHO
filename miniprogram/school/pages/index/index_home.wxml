@@ -6,7 +6,7 @@
 		</view>
 
 		<!--menu1 begin-->
-		<view class="comm-list grid col-4 no-border shadow comm-list-menu1">
+		<view class="comm-list grid col-4 no-border shadow comm-list-menu1" style="margin-top:{{-360+customBar}}rpx;">
 			<view class="item-title">常见应用</view>
 			<view class="item" bindtap="url" data-url="../news/news_index?cate=0">
 				<view class="item-circle bg-pink">

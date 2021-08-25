@@ -20,7 +20,7 @@ class PassportBiz extends BaseCCMiniBiz {
 	 * 获取系统配置
 	 */
 	static async setSetup(that) {
-		
+
 		let setup = ccminiCacheHelper.get(CACHE_SETUP);
 		if (!setup) {
 			setup = {};
@@ -28,7 +28,7 @@ class PassportBiz extends BaseCCMiniBiz {
 			setup.SETUP_IS_SUB = CCMINI_SETTING.PROJECT_IS_SUB;
 			that.setData({
 				setup
-			}); 
+			});
 
 			let opts = {
 				hint: false
@@ -55,7 +55,7 @@ class PassportBiz extends BaseCCMiniBiz {
 	 * 页面初始化
 	 * @param {*} that 
 	 */
-	static async  initPage(that) {
+	static async initPage(that) {
 		if (CCMINI_SETTING.TEST_OPEN_PAGES) {
 			let pages = getCurrentPages();
 			console.log('PAGE length=' + pages.length)
@@ -63,7 +63,16 @@ class PassportBiz extends BaseCCMiniBiz {
 				console.log('[PAGE' + k + ']' + pages[k].route)
 			}
 		}
- 
+
+		const app = getApp();
+		let statusBar = app.globalData.StatusBar;
+		let customBar = app.globalData.CustomBar;
+		let custom = app.globalData.Custom;
+		that.setData({
+			statusBar,
+			customBar,
+			custom
+		})
 
 		await PassportBiz.setSetup(that);
 
