@@ -59,5 +59,3 @@
 
 </block>
 
-<import src="../../ccmini-tpls/public/menu_tpl.wxml" />
-<template is="menuTpl"  data="{{setup, curMenu:'info_index'}}" />

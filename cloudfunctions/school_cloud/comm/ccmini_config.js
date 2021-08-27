@@ -14,9 +14,10 @@
  * Date: 2021-08-02 19:20:00
  */
 module.exports = {
-	CCMINI_CLOUD_ID: 'card-', // 云服务id  
+	CCMINI_CLOUD_ID: 'card-8gdoyuexd3702a23', // 云服务id  
 
-	CCMINI_ADMIN_MOBILE: '13988888888', // 管理员手机号码
+	CCMINI_ADMIN_NAME: 'ccadmin', // 管理员账号（6-30位)
+	CCMINI_ADMIN_PWD: '123456', // 管理员密码（6-30位)
 
 	CCMINI_TEST_MODE: false,
 

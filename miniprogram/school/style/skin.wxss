@@ -18,6 +18,26 @@
 
 
 /*非分包菜单*/
+
+.tab-bar-home{
+	position: fixed;
+	top:50rpx;
+	left:20rpx;
+	width:50rpx;
+	height:50rpx;
+	z-index: 999999;
+	border-radius: 50%;
+	background:#fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: .8;
+}
+
+.tab-bar-home text{
+	font-size:36rpx;
+}
+
 .tab-bar {
 	position: fixed;
 	bottom: 0;

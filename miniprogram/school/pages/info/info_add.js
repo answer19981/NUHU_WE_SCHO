@@ -105,7 +105,7 @@ Page({
 			let callback = async function () {
 				ccminiBizHelper.removeCacheList('info');
 
-				ccminiPageHelper.goto('/pages/info/info_index');
+				ccminiPageHelper.goto('/pages/info/info_index', 'back');
 			}
 			ccminiPageHelper.showSuccToast('发布成功', 2000, callback);
 

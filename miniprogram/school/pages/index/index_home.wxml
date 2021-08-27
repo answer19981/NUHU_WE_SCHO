@@ -77,6 +77,7 @@
 				<view class="title-sub" bindtap="url" data-url="../info/info_home">互动消息</view>
 			</view>
 			<view class="news-list">
+				<view wx:if="{{!list}}">加载中...</view>
 				<block wx:for="{{list}}" wx:key="key"> 
 					<view class="news-list-item"  bindtap="url" data-url="../news/news_detail?id={{item._id}}">
 						<block wx:if="{{item.NEWS_PIC}}">
@@ -119,4 +120,4 @@
 
 
 <import src="../../ccmini-tpls/public/menu_tpl.wxml" />
-<template is="menuTpl" data="{{setup, curMenu:'index_home'}}" />
+<template is="menuTpl" data="{{setup, returnHome:true,curMenu:'index_home'}}" />

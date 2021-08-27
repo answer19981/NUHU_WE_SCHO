@@ -17,26 +17,6 @@ Page({
 		PassportBiz.initApp();
 		await PassportBiz.initPage(this);
 
-		try {
-			let options = {
-				title: '加载中'
-			}
-			let params = {
-				search: '',
-				cate: '学校公告',
-			}
-
-			await ccminiCloudHelper.callCloudSumbit('news/list', params, options).then(res => { 
-				if (res && res.data && res.data.list) {
-					this.setData({
-						list: res.data.list
-					});
-				}
-			});
-		} catch (err) {
-			console.log(err);
-		}
-
 	},
 
 	/**
@@ -53,6 +33,29 @@ Page({
 
 		await PassportBiz.setSetup(this);
 
+		this._loadNewsList();
+	},
+
+	_loadNewsList: async function () {
+		try {
+			let options = {
+				title: 'bar'
+			}
+			let params = {
+				search: '',
+				cate: '学校公告',
+			}
+
+			await ccminiCloudHelper.callCloudSumbit('news/list', params, options).then(res => {
+				if (res && res.data && res.data.list) {
+					this.setData({
+						list: res.data.list
+					});
+				}
+			});
+		} catch (err) {
+			console.log(err);
+		}
 	},
 
 	/**

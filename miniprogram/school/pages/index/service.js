@@ -1,4 +1,6 @@
 const ccminiPageHelper = require('../../helper/ccmini_page_helper.js');
+const PassportBiz = require('../../biz/passport_biz.js'); 
+
 Page({
 
 	/**
@@ -11,8 +13,9 @@ Page({
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
-	onLoad: function (options) {
-
+	onLoad: async function (options) {
+		PassportBiz.initApp();
+		await PassportBiz.initPage(this);
 	},
 
 	/**
